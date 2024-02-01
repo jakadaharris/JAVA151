@@ -1,3 +1,10 @@
 import java.util.Scanner
 
-public class 
+public class Chapter3Problem2{
+
+  public static void main(String[] args){
+
+/*
+
+  }
+}
