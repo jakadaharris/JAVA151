@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MilesPerGallon{
+
+  public static void main(String[] args){
+    
+    /*
+    A car's miles-per-gallon (MPG) can be calculated with the following formula: 
+      MPG = Miles driven / Gallons of gas used
+    Write a program that asks the user for the number of miles driven and the gallons of gas used.
+    It should calculate the car's miles per gallon and display the result on the screen.
+    */
+    Scanner scanner = new Scanner(System.in);
+
+    // Initilize variables. Ask user for miles driven and gallons used.
+    System.out.println("Hello! Please enter the distance driven: ");
+    double milesDriven = scanner.nextDouble();
+    System.out.println("Please enter the amount of gas used in gallons: ");
+    double gallonsUsed = scanner.nextDouble();
+
+    // Process variables into above equation.
+    double milesPerGallon = (milesDriven / gallonsUsed);
+
+    // Output result. 
+    System.out.printf("Your car's fuel economy is %.2f" + milesPerGallon + ".");
+    
+  }
+}
