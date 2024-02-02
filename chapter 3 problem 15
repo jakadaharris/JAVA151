@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class BankCharges{
+
+  public static void main(String[] args){
+
+    /*
+    A bank charges a base fee of $10 per month, plus the following check fees for a commercial checking account.
+    $.10 each for less than 20 checks
+    $.08 each for 20-39 checks
+    $.06 each for 40-59 checks
+    $.04 each for 60 or more checks
+    Write a program that asks for the number of checks written for the month. The program should then calculate and display the bank's service fees for the month.
+    */
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Hello user!");
+
+String cont = "Y";
+while (cont.equals("Y")){
+  // Ask user to input number of checks written for the month.
+  System.out.println("Please enter the number of checks that you have written for this month: ");
+  int userInputChecks = scanner.nextInt();
+  
+  // If statement to calculate and process fees for user's checks. 
+  double bankFee = 0.0;
+  if (userInputChecks < 20){
+    bankFee = (.10 * userInputChecks);
+  } else if (userInputChecks >= 20 && userInputChecks <= 39){
+    bankFee = (.08 * userInputChecks);
+  } else if (userInputChecks >= 40 && userInputChecks <= 59){
+    bankFee = (.06 * userInputChecks);
+  } else if (userInputChecks >= 60){
+    bankFee = (.04 * userInputChecks);
+  }
+  
+  // Output result.
+  System.out.printf("The bank's service fees for the month will be: $%.2f" , bankFee);
+  
+  // Ask user if they would like to repeat program.
+  scanner.nextLine();
+  System.out.println("\nWould you like to enter a new set of data: ");
+  cont = scanner.nextLine();
+}
+// Thank the user.
+System.out.println("Thank you for using this program!");
+
+  }
+}
