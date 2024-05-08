@@ -1,19 +1,36 @@
-import java.util.Scanner
+import java.util.Scanner;
 
 public class Chapter3Problem2{
-
   public static void main(String[] args){
 
-/*
-  The date June 10, 1960, is special because when we write it in the following format, the month times the day equals the year:
-  6/10/60
-  Write a program that asks the user to enter a month (in numeric form), a day, and a two-digit year. 
-  The program should then determing whether the month times the day is equal to the year. If so, it 
-  should display a message saying the date is magiv. Otherwise, it should display a message saying 
-  the date is not magic.
-*/
+    /* 
+    The date June 10, 1960, is special because when we write it in the following format, the month times the day equals the year
+    6/10/60
+    Write a program that asks the user to enter a month (in numeric form), a day, and a two-digit year. The program should then determine whether the month times the day is equal to the year.
+    If so, it should display a message saying the date is magic. Otherwise, it should display a message saying the date is not magic.
+    */
 
-// 
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Hello!");
+    
+    // Ask user for numerical day, month and two-digit year.
+    System.out.println("Please enter the today's numerical day of the month.");
+    int day = scanner.nextInt();
+    System.out.println("Please enter the current month in numerical form.");
+    int month = scanner.nextInt();
+    System.out.println("Please enter the current year in two-digit form.");
+    int year = scanner.nextInt();
+
+    // Calculate date and output whether it is magical.
+    if (year == month * day){
+      System.out.println("Today is a magical date!");
+    } else (year != month * day){
+      System.out.println("Today is not a magical date");
+    }
+
+    System.out.println("Thank you for using this program.");
 
   }
+
 }
