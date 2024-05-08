@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exam2B23
+public class RoadsideAssistance
 {
    public static String getMembershipType()
    {
