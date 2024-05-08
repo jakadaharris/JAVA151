@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ProjectPart3Harris
+public class QualityRecommendationTool
 {
    public static void main(String[] args)
    {
